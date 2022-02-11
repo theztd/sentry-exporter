@@ -32,13 +32,13 @@ func main() {
 		log.Panicln("Unable to list objects")
 	}
 
-	f.WriteString("# HELP sentry_received_events Hourly received amount of events grouped by project-slug.\n")
+	f.WriteString("# HELP sentry_received_events_count Hourly received amount of events grouped by project-slug.\n")
 	for _, p := range projects {
 		stats, err := sentryProjectStats(p.Organization.Slug, p.Slug)
 		if err != nil {
 			log.Panicln(err)
 		}
-		f.WriteString(fmt.Sprintf("sentry_received_events{project=\"%s\"} %d\n", p.Slug, stats[0][1]))
+		f.WriteString(fmt.Sprintf("sentry_received_events_count{project=\"%s\"} %d\n", p.Slug, stats[0][1]))
 
 		// issues, err := sentryProjectIssues(p.Organization.Slug, p.Slug)
 		// if err != nil {
