@@ -1,3 +1,5 @@
+[![Release Go project](https://github.com/theztd/sentry-exporter/actions/workflows/release.yml/badge.svg)](https://github.com/theztd/sentry-exporter/actions/workflows/release.yml)
+
 # Sentry Exporter for prometheus
 
 Parse sentry stats API and provide metrics to prometheus.
