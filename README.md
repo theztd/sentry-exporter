@@ -29,7 +29,7 @@ This mode ignores parameters:
 
 ## Metrics example
 
-```toml
+```
 # HELP sentry_received_events_count Hourly received amount of events grouped by project-slug.
 sentry_received_events_count{project="fe-landing"} 6
 sentry_received_events_count{project="fe-user_area"} 1
